@@ -1,4 +1,4 @@
-# Two Sum
+# 2 Keys Keyboard
 
 ## Problem statement:
 There is only one character 'A' on the screen of a notepad. You can perform two operations on this notepad for each step:
