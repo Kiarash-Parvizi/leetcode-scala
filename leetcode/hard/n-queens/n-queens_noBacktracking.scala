@@ -1,4 +1,4 @@
-// O(n!) solution without backtracking
+// no backtracking solution
 object Solution {
     def solveNQueens(n: Int): List[List[String]] = {
         val ls = collection.mutable.ListBuffer[List[String]]()
