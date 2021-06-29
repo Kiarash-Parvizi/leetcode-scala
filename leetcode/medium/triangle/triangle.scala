@@ -2,13 +2,9 @@ object Solution {
     def minimumTotal(triangle: List[List[Int]]): Int = {
         val dp = triangle(triangle.length-1).toArray
         for (r <- dp.length-2 to 0 by -1) {
-            var v0  = dp(0)
             val tri = triangle(r).toArray
-            for (i <- 0 to r) {
-                val tmp = dp(i+1)
-                dp(i) = tri(i) + math.min(v0, dp(i+1))
-                v0 = tmp
-            }
+            for (i <- 0 to r)
+                dp(i) = tri(i) + math.min(dp(i), dp(i+1))
         }
         dp(0)
     }
